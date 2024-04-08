@@ -40,12 +40,17 @@ En el campo de la robótica y el control de sistemas dinámicos, los controlador
 Para la reproduccion del listerner y el talker.py se modificaron los archivos launch para poder ejecutar los archivos con la terminal en Ros, tambien para esto se ejecutaron simultaniamente los dos archivos para poder tener un buen funcionamiento y se pudiera escuchar y hablar.
 
 #!/usr/bin/env python
+
 import rospy
 from std_msgs.msg import String
+
 def chatter_callback(message):
+
     #get_caller_id(): Get fully resolved name of local node
-    rospy.loginfo(rospy.get_caller_id() + "I heard %s", message.data)   
+    rospy.loginfo(rospy.get_caller_id() + "I heard %s", message.data) 
+    
 def listener():
+
     # In ROS, nodes are uniquely named. If two nodes with the same
     # node are launched, the previous one is kicked off. The
     # anonymous=True flag means that rospy will choose a unique
