@@ -16,6 +16,25 @@ En el campo de la robótica y el control de sistemas dinámicos, los controlador
 
 - **Controlador Proporcional-Integral-Derivativo (PID)**: El controlador PID combina las acciones proporcional, integral y derivativa para proporcionar un control más completo y preciso del sistema. La componente derivativa anticipa la tendencia del error y proporciona una respuesta rápida a cambios en la referencia. Esto ayuda a mejorar la estabilidad y la respuesta dinámica del sistema, reduciendo el tiempo de respuesta y minimizando el sobrepico. El controlador PID es el más utilizado en aplicaciones industriales debido a su capacidad para controlar una amplia gama de sistemas con diferentes características dinámicas.
 
+## Problemas
+
+- **Basic**
+- Crear un paquete llamado Practicas_lab de ros con dependencias rospy, roscpp y std_msgs
+- Colocar los archivos listener.py y talker.py
+- Compilar el paquete.
+- Ejecutar el talker
+- Ejecutar el listener
+- Concluir sobre su funcionamiento.
+  
+- **Medium**
+- Crear un control por teclado para turtlesim
+- Dibujar un cuadrado y un triángulo equilátero con turtlesim (Sin controlador)
+  
+- **Advanced**
+- Control de posición para turtlesim (P)
+- Control de posición para turtlesim (PI)
+- Control de posición para turtlesim (PID)
+
 ## Conclusiones
 
 Los controladores PI, P y PID son herramientas poderosas en el diseño de sistemas de control, proporcionando una manera efectiva de regular y estabilizar sistemas dinámicos en una variedad de aplicaciones. La elección del controlador adecuado depende de las características específicas del sistema controlado, como su respuesta dinámica, el nivel de ruido presente y la precisión requerida. Al comprender los principios y las características de cada tipo de controlador, los ingenieros pueden diseñar sistemas de control más eficientes y robustos para satisfacer las necesidades de una amplia gama de aplicaciones en robótica y automatización.
