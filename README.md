@@ -35,36 +35,15 @@ En el campo de la robótica y el control de sistemas dinámicos, los controlador
 - Control de posición para turtlesim (PI)
 - Control de posición para turtlesim (PID)
 
-## Codigos 
+## Soluciones  
 
-Para la reproduccion del listerner y el talker.py se modificaron los archivos launch para poder ejecutar los archivos con la terminal en Ros, tambien para esto se ejecutaron simultaniamente los dos archivos para poder tener un buen funcionamiento y se pudiera escuchar y hablar.
+- Para la reproduccion del listerner y el talker.py se modificaron los archivos launch para poder ejecutar los archivos con la terminal en Ros, tambien para esto se ejecutaron simultaniamente los dos archivos para poder tener un buen funcionamiento y se pudiera escuchar y hablar.
+  
+-Para el nivel medio se realizo un codigo en el cual se ejecutaban movimientos para que la tortuga se moviera de acuerdo lo escrito en el codigo y girar mediante los angulos dados y repitiendolo varias veces para poder realizar el triangulo y el cubo, se realizan de manera aleatoria las lineas debido a que no hay controlador y lo unico que conoce el simulador es su posicion inicial y los movimientos del codigo. Para comtrolar la tortuga se hizo un codigo en el cual podiamos mover la tortuga en diferentes direcciones con el teclado sabiem¡ndo la posicion de la tortuga y indicando la accion de cada tecla como lo es ir hacia adelante, atras, izquierda y derecha.
 
-#!/usr/bin/env python
+-
 
-import rospy
-from std_msgs.msg import String
-
-    def chatter_callback(message):
-
-    #get_caller_id(): Get fully resolved name of local node
-    rospy.loginfo(rospy.get_caller_id() + "I heard %s", message.data) 
     
-def listener():
-
-    # In ROS, nodes are uniquely named. If two nodes with the same
-    # node are launched, the previous one is kicked off. The
-    # anonymous=True flag means that rospy will choose a unique
-    # name for our 'listener' node so that multiple listeners can
-    # run simultaneously.
-    rospy.init_node('listener', anonymous=True)
-
-    rospy.Subscriber("chatter", String, chatter_callback)
-
-    # spin() simply keeps python from exiting until this node is stopped
-    rospy.spin()
-
-if __name__ == '__main__':
-    listener()
 ## Conclusiones
 
 Los fundamentos de ROS se estudiaron en este laboratorio, así como las prácticas básicas y avanzadas de control de sistemas robóticos simulados. Todos los ejercicios requeridos se realizaron correctamente, lo que permitió reconocer y comprender los diferentes tipos de controladores, incluidos los controladores Proporcional (P), Proporcional-Integral (PI) y Proporcional-Integral-Derivativo (PID).
