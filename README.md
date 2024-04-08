@@ -39,9 +39,11 @@ En el campo de la robótica y el control de sistemas dinámicos, los controlador
 
 - Para la reproduccion del listerner y el talker.py se modificaron los archivos launch para poder ejecutar los archivos con la terminal en Ros, tambien para esto se ejecutaron simultaniamente los dos archivos para poder tener un buen funcionamiento y se pudiera escuchar y hablar.
   
--Para el nivel medio se realizo un codigo en el cual se ejecutaban movimientos para que la tortuga se moviera de acuerdo lo escrito en el codigo y girar mediante los angulos dados y repitiendolo varias veces para poder realizar el triangulo y el cubo, se realizan de manera aleatoria las lineas debido a que no hay controlador y lo unico que conoce el simulador es su posicion inicial y los movimientos del codigo. Para comtrolar la tortuga se hizo un codigo en el cual podiamos mover la tortuga en diferentes direcciones con el teclado sabiem¡ndo la posicion de la tortuga y indicando la accion de cada tecla como lo es ir hacia adelante, atras, izquierda y derecha.
+-Para el nivel medio se realizo un codigo en el cual se ejecutaban movimientos para que la tortuga se moviera de acuerdo lo escrito en el codigo y girar mediante los angulos dados y repitiendolo varias veces para poder realizar el triangulo y el cubo, se realizan de manera aleatoria las lineas debido a que no hay controlador y lo unico que conoce el simulador es su posicion inicial y los movimientos del codigo. Para comtrolar la tortuga se hizo un codigo en el cual podiamos mover la tortuga en diferentes direcciones con el teclado sabiendo la posicion de la tortuga y indicando la accion de cada tecla como lo es ir hacia adelante, atras, izquierda y derecha.
 
--
+-Para los controladores se hicieron tres codigos los cuales se pide una coordenada en x, otra coordenada en y y el angulo en el que se requiere que la tortuga se mueva, haciendo yn recorrido a la posicion deseada con el angulo requerido asi para los diferentes controladores P, PI y PID.
+
+**Los codigos se encuentran en la carpeta de lab2 que esta añadida en el documento.**
 
     
 ## Conclusiones
