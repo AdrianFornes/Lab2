@@ -44,7 +44,7 @@ Para la reproduccion del listerner y el talker.py se modificaron los archivos la
 import rospy
 from std_msgs.msg import String
 
-def chatter_callback(message):
+    def chatter_callback(message):
 
     #get_caller_id(): Get fully resolved name of local node
     rospy.loginfo(rospy.get_caller_id() + "I heard %s", message.data) 
