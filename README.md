@@ -35,6 +35,39 @@ En el campo de la robótica y el control de sistemas dinámicos, los controlador
 - Control de posición para turtlesim (PI)
 - Control de posición para turtlesim (PID)
 
+## Codigos 
+
+Para la reproduccion del listerner y el talker.py se modificaron los archivos launch para poder ejecutar los archivos con la terminal en Ros, tambien para esto se ejecutaron simultaniamente los dos archivos para poder tener un buen funcionamiento y se pudiera escuchar y hablar.
+
+#!/usr/bin/env python
+import rospy
+from std_msgs.msg import String
+
+def chatter_callback(message):
+    #get_caller_id(): Get fully resolved name of local node
+    rospy.loginfo(rospy.get_caller_id() + "I heard %s", message.data)
+    
+def listener():
+
+    # In ROS, nodes are uniquely named. If two nodes with the same
+    # node are launched, the previous one is kicked off. The
+    # anonymous=True flag means that rospy will choose a unique
+    # name for our 'listener' node so that multiple listeners can
+    # run simultaneously.
+    rospy.init_node('listener', anonymous=True)
+
+    rospy.Subscriber("chatter", String, chatter_callback)
+
+    # spin() simply keeps python from exiting until this node is stopped
+    rospy.spin()
+
+if __name__ == '__main__':
+    listener()
 ## Conclusiones
 
-Los controladores PI, P y PID son herramientas poderosas en el diseño de sistemas de control, proporcionando una manera efectiva de regular y estabilizar sistemas dinámicos en una variedad de aplicaciones. La elección del controlador adecuado depende de las características específicas del sistema controlado, como su respuesta dinámica, el nivel de ruido presente y la precisión requerida. Al comprender los principios y las características de cada tipo de controlador, los ingenieros pueden diseñar sistemas de control más eficientes y robustos para satisfacer las necesidades de una amplia gama de aplicaciones en robótica y automatización.
+Los fundamentos de ROS se estudiaron en este laboratorio, así como las prácticas básicas y avanzadas de control de sistemas robóticos simulados. Todos los ejercicios requeridos se realizaron correctamente, lo que permitió reconocer y comprender los diferentes tipos de controladores, incluidos los controladores Proporcional (P), Proporcional-Integral (PI) y Proporcional-Integral-Derivativo (PID).
+
+La ejecución exitosa de los ejercicios demostró que el equipo tenía la capacidad de aplicar la teoría del control a la práctica en un entorno de simulación robótica. La comprensión de los principios de los controladores y su aplicación en ROS establece una base sólida para futuros proyectos y desarrollos en el campo de la robótica y la automatización.
+
+Este laboratorio brindó una oportunidad importante para explorar las capacidades de ROS y mejorar las habilidades en el diseño, desarrollo y control de sistemas robóticos. Los estudiantes están mejor preparados para enfrentar desafíos más complejos en el futuro al desarrollar soluciones robóticas innovadoras y eficientes.
+
